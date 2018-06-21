@@ -1,4 +1,4 @@
-# Forecasting Facebook Stock Prices
+]# Forecasting Facebook Stock Prices
 ## Description
 This project predict future stock prices specially the closed price based on previous data.
 It is a machine learning and data science project focussing linear regression.
@@ -17,5 +17,5 @@ python3.6.5
 
 ## Explanation
 ### Linear Regression
-[![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/explanation1.png)](https://twitter.com/Shaon_Mazoomder)
+[![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/explain1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Best fit line </p>
