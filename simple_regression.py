@@ -16,7 +16,11 @@ def m_b(x,y):
 m,b= m_b(x,y)
 y_ = m*x + b
 
+prediction_x = 6.5
+prediction_y = m*prediction_x + b
+
 plt.scatter(x,y, label='real data points', color='r')
+plt.scatter(prediction_x,prediction_y, label='single prediction', color='g')
 plt.plot(x,y_, label='prediction line')
 
 plt.legend(loc=4)
