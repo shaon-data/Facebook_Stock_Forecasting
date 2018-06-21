@@ -17,6 +17,7 @@ python3.6.5
 
 ## Explanation
 ### Simple Linear Regression Example
+#### Determmination of m and b
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/explain1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Best fit line </p>
 
