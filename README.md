@@ -14,3 +14,8 @@ python3.6.5
 
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/result2.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Zoomed to Recent </p>
+
+## Explanation
+### Linear Regression
+[![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/explanation1.png)](https://twitter.com/Shaon_Mazoomder)
+<p align="center"> Best fit line </p>
