@@ -16,6 +16,7 @@ def m_b(x,y):
 m,b= m_b(x,y)
 y_ = m*x + b
 
+# prediction
 prediction_x = 6.5
 prediction_y = m*prediction_x + b
 
