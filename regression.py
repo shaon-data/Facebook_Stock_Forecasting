@@ -73,6 +73,6 @@ plt.legend(loc=4)
 plt.title('Forecasting of Facebook')
 plt.xlabel('Date')
 plt.ylabel('Price')
-plt.savefig('result.png')
+plt.savefig('pics/result.png')
 plt.show()
 
