@@ -21,5 +21,6 @@ python3.6.5
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/explain1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Best fit line </p>
 #### Plotting best fit line
+
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/simple_linear_regression1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Simple Linear Regression Example </p>
