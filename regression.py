@@ -1,14 +1,15 @@
-import quandl, math, datetime
+import quandl, math
+import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib import style
+from matplotlib import style
 from sklearn import preprocessing, cross_validation, svm
 from sklearn.linear_model import LinearRegression
 
 style.use('ggplot')
 
-df = quandl.get('WIKI/GOOGL')
+df = quandl.get('WIKI/FB')
 
 df = df[['Adj. Open', 'Adj. High', 'Adj. Low', 'Adj. Close', 'Adj. Volume']]
 df['HL_PCT'] = (df['Adj. High'] - df['Adj. Close'])/df['Adj. Close']*100.0
@@ -43,4 +44,22 @@ clf.fit(X_train, y_train) #train
 accuracy = clf.score(X_test, y_test) #test
 
 forecast_set = clf.predict(X_lately)
-print(forecast_set, accuracy, forecast_out)
+#print(forecast_set, accuracy, forecast_out)
+df['Forecast'] = np.nan
+
+last_date = df.iloc[-1].name
+last_unix = last_date.timestamp()
+one_day = 86400
+next_unix = last_unix + one_day
+
+for i in forecast_set:
+    next_date = datetime.datetime.fromtimestamp(next_unix)
+    next_unix += one_day
+    df.loc[next_date] = [np.nan for _ in range(len(df.columns)-1)] + [i]
+
+df['Adj. Close'].plot()
+df['Forecast'].plot()
+plt.legend(loc=4)
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.show()
