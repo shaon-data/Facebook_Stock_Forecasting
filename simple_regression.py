@@ -22,6 +22,7 @@ plt.legend(loc=4)
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('Simple Linear Regression')
+plt.tight_layout()
 
 plt.savefig('simple_linear_regression1.png')
 plt.show()
