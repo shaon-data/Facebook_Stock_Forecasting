@@ -16,13 +16,13 @@ def m_b(x,y):
 m,b= m_b(x,y)
 y_ = m*x + b
 
-plt.plot(x,y, label='real line')
+plt.scatter(x,y, label='real data points', color='r')
 plt.plot(x,y_, label='prediction line')
+
 plt.legend(loc=4)
 plt.xlabel('X')
 plt.ylabel('Y')
 plt.title('Simple Linear Regression')
-plt.tight_layout()
 
 plt.savefig('simple_linear_regression1.png')
 plt.show()
