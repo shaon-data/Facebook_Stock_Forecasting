@@ -27,7 +27,25 @@ plt.plot(x,y_, label='prediction line')
 plt.legend(loc=4)
 plt.xlabel('X')
 plt.ylabel('Y')
-plt.title('Simple Linear Regression')
-
+plt.title('Simple Linear Regression(SLR)')
+plt.tight_layout()
 plt.savefig('simple_linear_regression1.png')
+plt.show()
+
+
+plt.scatter(x,y, label='real data points', color='r')
+plt.plot(x,y_, label='prediction line')
+i=0
+
+for xi,y_i,yi in zip(np.nditer(x),np.nditer(y_),np.nditer(y)):    
+    plt.plot([xi,xi],[y_i,yi],label='error',color='b')
+    if i == 0:
+        i=1
+        plt.legend(['Prediction line', 'Prediction Error' , 'Data Points'],loc=4)
+        
+plt.xlabel('X')
+plt.ylabel('Y')
+plt.title('Errors of Prediction SLR')
+plt.tight_layout()
+plt.savefig('errors1')
 plt.show()

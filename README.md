@@ -25,3 +25,9 @@ python3.6.5
 
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/simple_linear_regression1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Plot of Predicted and initial line</p>
+
+#### Determining the accuracy
+
+[![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/errors1.png)](https://twitter.com/Shaon_Mazoomder)
+<p align="center"> Plot of Predicted and initial line</p>
+
