@@ -1,11 +1,4 @@
-# Forecasting of Facebook Stock Prices
+# origin 
 ## Download 
 For downloading use 
-	`git clone https://github.com/ShaonMajumder/regression_on_stock_price.git`
-
-## Languages
-python3.6.5
-
-preprocessing
-cross_validation
-svm
+       git clone https://github.com/ShaonMajumder/forecasting_facebook_stock_prices.git 
