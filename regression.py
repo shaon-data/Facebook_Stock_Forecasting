@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib import style
 from sklearn import preprocessing, cross_validation, svm
 from sklearn.linear_model import LinearRegression
+import pickle
 
 style.use('ggplot')
 
@@ -41,6 +42,13 @@ X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_
 
 clf = LinearRegression()
 clf.fit(X_train, y_train) #train
+##saving the classifier for avoiding training every time after training once
+with open('linearregression.pickle','wb') as f: #writing in binary format
+        pickle.dump(clf, f) #serializationn of any python object and saving
+
+pickle_in = open('linearregression.pickle','rb') # reading of binary format file
+clf = pickle.load(pickle_in) # loading
+        
 accuracy = clf.score(X_test, y_test) #test
 
 forecast_set = clf.predict(X_lately)
