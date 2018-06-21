@@ -1,4 +1,7 @@
 # Forecasting Facebook Stock Prices
+## Description
+This project predict future stock prices specially the closed price based on previous data.
+It is a machine learning and data science project focussing linear regression.
 ## Download 
 For downloading use 
        `git clone https://github.com/ShaonMajumder/forecasting_facebook_stock_prices.git`
