@@ -23,7 +23,7 @@ forecast_col = 'Adj. Close'
 #inplace used for instead of reassining a slice of previous dataframe into result varriable, we directly changed the dataframe
 df.fillna(-99999, inplace=True)
 
-forecast_out = int(math.ceil(0.01*len(df)))
+forecast_out = int(math.ceil(0.02*len(df))) #getting last 30 days forecasting
 
 #Shift index by desired number of periods with an optional time freq
 df['label'] = df[forecast_col].shift(-forecast_out)
@@ -44,7 +44,7 @@ clf.fit(X_train, y_train) #train
 accuracy = clf.score(X_test, y_test) #test
 
 forecast_set = clf.predict(X_lately)
-#print(forecast_set, accuracy, forecast_out)
+print(forecast_set, accuracy, forecast_out)
 df['Forecast'] = np.nan
 
 last_date = df.iloc[-1].name
@@ -62,6 +62,7 @@ print(df.head())
 df['Adj. Close'].plot()
 df['Forecast'].plot()
 plt.legend(loc=4)
+plt.title('Forecasting of Facebook')
 plt.xlabel('Date')
 plt.ylabel('Price')
 plt.show()
