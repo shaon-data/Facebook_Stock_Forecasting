@@ -34,8 +34,9 @@ df['label'] = df[forecast_col].shift(-forecast_out)
 
 X = np.array(df.drop(['label'],1))
 X = preprocessing.scale(X)
-X_lately = X[-forecast_out:]
-X = X[:-forecast_out]
+X_lately = X[-forecast_out:] #last 10% of data we are going to predict
+X = X[:-forecast_out] #first 90% of data
+
 
 
 df.dropna(inplace=True)
