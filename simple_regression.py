@@ -51,7 +51,7 @@ for xi,y_i,yi in zip(np.nditer(x),np.nditer(y_),np.nditer(y)):
     plt.plot([xi,xi],[y_i,yi],label='error',color='b')
     if i == 0:
         i=1
-        plt.legend(['Prediction line (y_hat)', 'Prediction Error' , 'Data Points'],loc=4)
+        plt.legend(['Prediction line (y_hat)', 'Prediction Error(y_hat-y)' , 'Data Points'],loc=4)
         
 plt.xlabel('X')
 plt.ylabel('Y')

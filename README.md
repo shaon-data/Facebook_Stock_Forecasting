@@ -34,4 +34,4 @@ python3.6.5
 <p align="center"> Errors </p>
 
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/pics/co_efficient_of_determination.png)](https://twitter.com/Shaon_Mazoomder)
-<p align="center"> Errors </p>
+<p align="center"> Co-efficient of Determination </p>
