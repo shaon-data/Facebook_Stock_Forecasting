@@ -24,6 +24,8 @@ forecast_col = 'Adj. Close'
 #inplace used for instead of reassining a slice of previous dataframe into result varriable, we directly changed the dataframe
 df.fillna(-99999, inplace=True)
 
+#for 30 days it is 2%=0.02 0f FB data
+#here we are predicting 10%=0.1 of fb data
 forecast_out = int(math.ceil(0.02*len(df))) #getting last 30 days forecasting
 
 #Shift index by desired number of periods with an optional time freq
