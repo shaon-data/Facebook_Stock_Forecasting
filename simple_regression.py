@@ -16,9 +16,9 @@ def m_b(x,y):
 def squared_error(ys_orig,ys_line):
     return sum((ys_line-ys_orig)**2)
 
-def coefficient_of_determination(ys_orig,ys_line):
-    squared_error_y_reg = squared_error(ys_orig, ys_line)
-    squared_error_y_mean = squared_error(ys_orig, mean(ys_orig) )
+def coefficient_of_determination(y,y_):
+    squared_error_y_reg = squared_error(y, y_)
+    squared_error_y_mean = squared_error(y, mean(y) )
     return 1 - (squared_error_y_reg/squared_error_y_mean)
 
 m,b= m_b(x,y)
@@ -32,7 +32,7 @@ r_squared = coefficient_of_determination(y,y_)
 print(r_squared)
 plt.scatter(x,y, label='real data points', color='r')
 plt.scatter(prediction_x,prediction_y, label='single prediction', color='g')
-plt.plot(x,y_, label='prediction line')
+plt.plot(x,y_, label='prediction line(y_hat)')
 
 plt.legend(loc=4)
 plt.xlabel('X')
@@ -51,7 +51,7 @@ for xi,y_i,yi in zip(np.nditer(x),np.nditer(y_),np.nditer(y)):
     plt.plot([xi,xi],[y_i,yi],label='error',color='b')
     if i == 0:
         i=1
-        plt.legend(['Prediction line', 'Prediction Error' , 'Data Points'],loc=4)
+        plt.legend(['Prediction line (y_hat)', 'Prediction Error' , 'Data Points'],loc=4)
         
 plt.xlabel('X')
 plt.ylabel('Y')
