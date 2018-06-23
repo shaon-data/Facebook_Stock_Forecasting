@@ -27,3 +27,6 @@ Besides, it's a fascination to forecast stock price from only index values and o
 	how much it create impacts on daily life of people, how much spreaded it is, future events
 	and present of the company and many hidden variables.
 
+So, it is advised to always experiment and find the best feature and model to start with.
+If you use the codes and bring updates don't forget to have a merge request here.
+It will help community to grow.
