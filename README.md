@@ -35,3 +35,12 @@ python3.6.5
 
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/pics/co_efficient_of_determination.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Co-efficient of Determination, r<sup>2</sup> </p>
+
+## Caution
+They are not the best feature for predicting stock value.
+Only adjusted close among the all selected features has the direct impact of stock price forecasting here.
+Besides, it's a fascination to forecast stock price from only index values and other stock features.
+	Think of Facebook, why it worths so much ! It can not be depended only on stock.
+	A comapny's worth value is determined by its promise of growth, power of acquisition, how much it create impacts on daily life of people, how much spreaded it is, future events and present of the company and many hidden variables.
+
+It can not be depended
