@@ -17,9 +17,11 @@ python3.6.5
 
 ## Explanation
 ### Simple Linear Regression Example
-#### Determmination of m and b
+#### Determmination of m and b and y_hat
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/pics/explain1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Definations & Equations </p>
+
+####
 
 #### Plotting best fit line
 
@@ -31,3 +33,5 @@ python3.6.5
 [![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/pics/errors1.png)](https://twitter.com/Shaon_Mazoomder)
 <p align="center"> Errors </p>
 
+[![Result Full](https://raw.githubusercontent.com/ShaonMajumder/forecasting_facebook_stock_prices/master/pics/co_efficient_of_determination.png)](https://twitter.com/Shaon_Mazoomder)
+<p align="center"> Errors </p>
