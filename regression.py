@@ -22,7 +22,7 @@ forecast_col = 'Adj. Close'
 
 #instead of Nan, considering as outlier for not loosing nan row other information
 #inplace used for instead of reassining a slice of previous dataframe into result varriable, we directly changed the dataframe
-df.fillna(-99999, inplace=True)
+df.fillna(-99999, inplace=True) #making 99999 is big outlier for missing data. this is ignored or recognized by most of the algorithm as outliers
 
 #for 30 days it is 2%=0.02 0f FB data
 #here we are predicting 10%=0.1 of fb data
