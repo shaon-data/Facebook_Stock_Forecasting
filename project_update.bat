@@ -1,6 +1,7 @@
 echo off
 setlocal EnableDelayedExpansion
 echo Checking if need initialization...
+SET init=0
 if not exist prm (
 	SET /P repon=Repository name:
 	SET /P repol=Repository link:
@@ -9,16 +10,41 @@ if not exist prm (
 	mkdir prm
 	echo [initialized] > prm/project.log
 	echo [remotename:!repon!] >> prm/project.log
-	echo "Queries for sloving Issues" > prm/query.txt	
+	echo [remotelink:!repol!] >> prm/project.log
+	echo Queries for sloving Issues > prm/query.txt	
 	echo # !repon! > README.md
 	echo ## Download >> README.md
 	echo For downloading use >> README.md
-	echo        git clone !repol! >> README.md
+	echo        `git clone !repol!` >> README.md
 
 
 	git init
 	git add .
 	git remote add !repon! !repol!
+
+	SET init=1
+
+)
+
+IF "%init%" == "1" (
+	rem pushing starts
+
+	SET /P umes=Commit Message:
+
+	IF [!umes!] == [] (
+		echo empty message - con...
+		SET umes=continuing
+	)
+
+
+	echo Pushing...
+	git add .
+	git commit -m "!umes!"
+	git push -u !repon! master
+
+	rem pushing ends
+
+	exit
 )
 
 echo .....
@@ -50,13 +76,23 @@ IF "%command%" == "git" (
 	SET /p command=Give me a Command:
 
 	IF "!command!" == "push" (
+		rem push function
+
 		SET command=
 
 		SET /P umes=Commit Message:
+
+		IF [!umes!] == [] (
+			echo empty message - con...
+			SET umes=continuing
+		)
+
 		echo Pushing...
 		git add .
 		git commit -m "!umes!"
 		git push -u !repon! master
+
+		rem push function ends
 	)
 
 ) ELSE IF "%command%" == "query" (
@@ -91,9 +127,15 @@ IF "%command%" == "git" (
 
 
 	SET /P umes=Commit Message:
+
+	IF [!umes!] == [] (
+		echo empty message - con...
+		SET umes=continuing
+	)
+
 	echo Pushing...
 	git add .
 	git commit -m "!umes!"
-	git push -u !repon! master
+	git push -u !repon! master	
 
 )
